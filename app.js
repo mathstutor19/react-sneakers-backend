@@ -5,7 +5,7 @@ const fs = require('fs');
 // Route to get all people
 app.get('/', (req, res) => {
   // Read data from the file
-  const data = fs.readFileSync('./data.json');
+  const data = fs.readFileSync(`${__dirname}/data.json`);
   const people = JSON.parse(data);
   res.json(people);
 });
