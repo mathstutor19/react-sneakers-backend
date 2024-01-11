@@ -4,7 +4,7 @@ const fs = require('fs');
 const port = 5000;
 
 // Route to get all people
-app.get('/krasofka', (req, res) => {
+app.get('/', (req, res) => {
   // Read data from the file
   const data = fs.readFileSync('./data.json');
   const people = JSON.parse(data);
